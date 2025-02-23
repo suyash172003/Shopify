@@ -3,7 +3,7 @@ import '../index.css'
 
 function Landing() {
   const navbar = ["Home", "Orders", "Cart"]
-  const heading = ["Welcome", "to", "Apni", "Dukkan"]
+  const heading = ["Welcome", "to", "Shopify"]
   return (
     <div className='h-screen w-full flex flex-col overflow-hidden gap-5'>
          <div className='h-10 w-full flex flex-row justify-between items-center'>
@@ -14,7 +14,7 @@ function Landing() {
             </ul>
          </div>
          <div className='h-full w-full flex flex-row justify-center items-center gap-5'>
-            <div className='h-full w-1/2 flex flex-col justify-center items-center gap-5'>
+            <div className='h-full w-1/2 flex flex-col justify-start items-center'>
             <ul className='h-96 w-full flex flex-col gap-5 justify-center items-center'>
               {heading.map((item, index) => {
                 return <h1 className='text-6xl font-bold text-black' key={index}>{item}</h1>
