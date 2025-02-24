@@ -2,7 +2,7 @@ import React from 'react'
 import '../index.css'
 
 function Landing() {
-  const navbar = ["Home", "Orders", "Cart"]
+  const navbar = ["Home", "Top Rated", "Kids Wear", "Mens Wear", "Electronics", "Trending Products"]
   const heading = ["Welcome", "to", "Shopify"]
   return (
     <div className='h-screen w-full flex flex-col overflow-hidden gap-5'>
