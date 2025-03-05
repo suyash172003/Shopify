@@ -1,9 +1,10 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
+import {motion} from 'framer-motion'
 
 function Brands() {
   return (
-    <div className='p-20 h-full w-full flex flex-col justify-between items-center gap-20'>
+    <div initial={{scale:0}} animate={{scale:1}} transition={{duration:2}} className='p-20 h-full w-full flex flex-col justify-between items-center gap-20'>
       <div className='flex flex-col justify-between items-center'>
         <div className='text-amber-400'>Top Selling Products for you</div>
         <h1 className='text-black font-bold text-3xl'>Products</h1>

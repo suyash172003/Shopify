@@ -1,18 +1,19 @@
 import React from 'react'
 import '../index.css'
+import {delay, motion} from 'framer-motion'
 
 function Landing() {
   const navbar = ["Home", "Top Rated", "Kids Wear", "Mens Wear", "Electronics", "Trending Products"]
   const heading = ["Upto 50% off", "on all Men's Wear"]
   return (
     <div className='h-screen w-full flex flex-col overflow-hidden gap-5'>
-         <div className='h-4 w-full flex flex-row justify-center items-center mt-4'>
+         <motion.div initial={{scale:0}} animate={{scale:1}} transition={{duration:0.4}} className='h-4 w-full flex flex-row justify-center items-center mt-4'>
             <ul className='h-full w-full flex flex-row justify-center items-center gap-10'>
               {navbar.map((item, index) => {
                 return <li key={index}>{item}</li>
               })}
             </ul>
-         </div>
+         </motion.div>
          <div className='h-full w-full flex flex-row justify-center items-center bg-gray-100'>
             <div className='h-full w-1/2 flex flex-col justify-center items-start p-20 gap-4'>
               <h1 className='text-6xl font-bold'>{heading[0]}</h1>

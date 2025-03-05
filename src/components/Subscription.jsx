@@ -3,10 +3,14 @@ import { BsFillLockFill } from "react-icons/bs";
 import { IoFastFood } from "react-icons/io5";
 import { MdPayment } from "react-icons/md";
 import { RiDiscountPercentFill } from "react-icons/ri";
+import {motion} from 'framer-motion'
+
 
 function Subscription() {
+  const [view, useView] = React.useState(false)
+
   return (
-    <div className='h-full w-full p-20'>
+    <motion.div initial={{scale:0}} whileInView={{scale:1}}  transition={{ease:"linear"}} className='h-full w-full py-30'>
         <div className='flex justify-center items-center gap-10'>
           <img src="https://shopsy-tcj.netlify.app/assets/women2-wroTMLvf.jpg"></img>
           <div>
@@ -32,14 +36,14 @@ function Subscription() {
               </ul>
           </div>
         </div>
-        <div className='h-30 w-full bg-amber-400 flex flex-col items-center justify-center mt-10 p-10 gap-2'>
+        <div className='h-60 w-full bg-amber-400 flex flex-col items-center justify-center mt-10 p-10 gap-2'>
           <h1 className='text-2xl font-bold'>Get Notified About New Products</h1>
-          <div className='h-20 w-40'>
+          <div className='h-12 w-64 bg-white flex items-center p-2'>
             <input type='email' placeholder='Enter your email'></input>
           </div>
 
         </div>
-    </div>
+    </motion.div>
   )
 }
 
